@@ -6,3 +6,12 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+let acc_price = 0;
+console.log("'''\nQTY\t\tITEM\t\t\tTOTAL");
+for (let i in order) {
+  let { itemName, quantity, unitPrice } = order[i];
+  acc_price += unitPrice;
+  console.log(`\n${quantity}\t\t${itemName}\t\t\t${unitPrice}`);
+}
+
+console.log(`TOTAL: ${acc_price}\n'''`);

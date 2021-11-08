@@ -70,3 +70,21 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+const [...gryffindor] = hogwarts.filter(
+  (student) => student.house === "Gryffindor"
+);
+console.log("Students in Gryffindor House:");
+gryffindor.forEach((student) =>
+  console.log(`\n\t${student.firstName} ${student.lastName}`)
+);
+
+const [...teachersWhoHavePets] = hogwarts.filter(
+  (teacher) => teacher.occupation === "Teacher" && teacher.pet
+);
+
+teachersWhoHavePets.forEach((teacher) =>
+  console.log(
+    `\n\nTeachers who have pets: ${teacher.firstName} ${teacher.lastName}`
+  )
+);
